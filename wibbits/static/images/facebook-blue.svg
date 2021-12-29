@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60.1 (88133) - https://sketch.com -->
+    <title>icons8-facebook-old (1)</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="02-Icons/Facebook" transform="translate(-3.000000, -3.000000)" fill="#0055FB">
+            <g id="icons8-facebook-old-(1)" transform="translate(3.000000, 3.000000)">
+                <path d="M14,0 L4,0 C1.791,0 0,1.791 0,4 L0,14 C0,16.209 1.791,18 4,18 L9.621,18 L9.621,11.039 L7.278,11.039 L7.278,8.314 L9.621,8.314 L9.621,6.309 C9.621,3.985 11.042,2.718 13.116,2.718 C13.815,2.716 14.513,2.752 15.208,2.823 L15.208,5.253 L13.78,5.253 C12.65,5.253 12.43,5.787 12.43,6.575 L12.43,8.31 L15.13,8.31 L14.779,11.035 L12.414,11.035 L12.414,18 L14,18 C16.209,18 18,16.209 18,14 L18,4 C18,1.791 16.209,0 14,0 Z" id="Path"></path>
+            </g>
+        </g>
+    </g>
+</svg>

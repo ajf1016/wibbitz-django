@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		{% load static %}
+		<meta charset="UTF-8" />
+		<title>Wibbitz: Online video creation made easy</title>
+		<link
+			rel="stylesheet"
+			href="{% static 'css/style.css' %}"
+			type="text/css"
+		/>
+		<link
+			rel="stylesheet"
+			href="{% static 'css/fontello.css' %}"
+			type="text/css"
+		/>
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="{% static 'images/favicon.png' %}"
+		/>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta property="og:image" content="" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+	</head>
+	<body>
+		<header>
+			<h1 class="left">
+				<a href="#"
+					><img src="{% static 'images/logo.svg' %}" alt="Logo"
+				/></a>
+			</h1>
+			<nav class="middle">
+				<ul>
+					<li><a href="#">Solutions</a></li>
+					<li><a href="#">Enterprise</a></li>
+					<li><a href="#">Use Cases</a></li>
+					<li><a href="#">Pricing</a></li>
+					<li><a href="#">Resources</a></li>
+					<li><a href="#">Company</a></li>
+				</ul>
+			</nav>
+			<nav class="right">
+				<ul>
+					<li><a href="#">Login</a></li>
+					<li><a href="#" class="button">Get a Demo</a></li>
+				</ul>
+			</nav>
+		</header>
+		{%block content%}{%endblock%}
+		<footer>
+			<section class="wrapper">
+				<section class="top">
+					<div class="item large">
+						<h2>
+							The online video editor trusted by teams to make
+							professional video in minutes.
+						</h2>
+						<div class="social">
+							<ul>
+								<li>
+									<a href=""
+										><img
+											src="{% static 'images/facebook-blue.svg' %}"
+											alt=""
+									/></a>
+								</li>
+								<li>
+									<a href=""
+										><img
+											src="{% static 'images/twitter-blue.svg' %}"
+											alt=""
+									/></a>
+								</li>
+								<li>
+									<a href=""
+										><img
+											src="{% static 'images/linkedin-blue.svg' %}"
+											alt=""
+									/></a>
+								</li>
+								<li>
+									<a href=""
+										><img
+											src="{% static 'images/youtube-blue.svg' %}"
+											alt=""
+									/></a>
+								</li>
+								<li>
+									<a href=""
+										><img
+											src="{% static 'images/Instagram.svg' %}"
+											alt=""
+									/></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="item">
+						<h5>Solutions</h5>
+						<ul>
+							{% for product in products %}
+							<li>
+								<a href="#"
+									><img
+										src="{{product.logo.url}}"
+										alt="{{product.title}}"
+									/><span>{{product.name}}</span></a
+								>
+							</li>
+							{% endfor %}
+						</ul>
+					</div>
+					<div class="item">
+						<h5>Use Cases</h5>
+						<ul>
+							<li><a href="#">Marketing</a></li>
+							<li><a href="#">Social Media</a></li>
+							<li><a href="#">Publishers</a></li>
+							<li><a href="#">Agencies</a></li>
+							<li><a href="#">Corporate Communications</a></li>
+							<li><a href="#">Enterprise</a></li>
+						</ul>
+					</div>
+					<div class="item">
+						<h5>Resources</h5>
+						<ul>
+							<li><a href="#">Learning Center</a></li>
+							<li><a href="#">Customers</a></li>
+							<li><a href="#">Video Showcase</a></li>
+						</ul>
+						<a href="#" class="bold">Pricing</a>
+					</div>
+					<div class="item">
+						<h5>Company</h5>
+						<ul>
+							<li><a href="#">About Us</a></li>
+							<li><a href="#">Jobs</a></li>
+							<li><a href="#">Press</a></li>
+						</ul>
+						<h5>Legal</h5>
+						<ul>
+							<li><a href="#">Terms and Conditions</a></li>
+							<li><a href="#">Privacy Policy</a></li>
+						</ul>
+					</div>
+				</section>
+				<section class="bottom">
+					<div class="title">
+						<img
+							src="{% static 'images/globe-gray.svg' %}"
+							alt=""
+						/>
+						<span>Choose language</span>
+					</div>
+					<div class="bottom">
+						<ul>
+							<li><a href="#">English</a></li>
+							<li><a href="#">Français</a></li>
+						</ul>
+					</div>
+				</section>
+			</section>
+		</footer>
+
+		<script src="{% static 'js/jquery-3.5.1.min.js' %}"></script>
+		<script src="{% static 'js/sweetalert2.min.js' %}"></script>
+		<script src="{% static 'js/script.js' %}"></script>
+	</body>
+</html>

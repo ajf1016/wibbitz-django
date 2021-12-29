@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="16px" viewBox="0 0 20 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60.1 (88133) - https://sketch.com -->
+    <title>icons8-play-button (2)</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="02-Icons/Youtube" transform="translate(-2.000000, -4.000000)" fill="#0055FB">
+            <g id="icons8-play-button-(2)" transform="translate(2.000000, 4.000000)">
+                <path d="M19.582,2.186 C19.352,1.326 18.674,0.648 17.814,0.418 C16.254,0 10,0 10,0 C10,0 3.746,0 2.186,0.418 C1.326,0.648 0.648,1.326 0.418,2.186 C0,3.746 0,8 0,8 C0,8 0,12.254 0.418,13.814 C0.648,14.674 1.326,15.352 2.186,15.582 C3.746,16 10,16 10,16 C10,16 16.254,16 17.814,15.582 C18.675,15.352 19.352,14.674 19.582,13.814 C20,12.254 20,8 20,8 C20,8 20,3.746 19.582,2.186 Z M8,10.598 L8,5.402 C8,5.017 8.417,4.777 8.75,4.969 L13.25,7.567 C13.583,7.759 13.583,8.241 13.25,8.433 L8.75,11.031 C8.417,11.224 8,10.983 8,10.598 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

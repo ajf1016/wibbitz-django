@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
+    <title>02 Icons/Browser</title>
+    <desc>Created with Sketch.</desc>
+    <g id="02-Icons/Browser" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M4,3 C2.895,3 2,3.895 2,5 L2,8 C2,8.552 2.448,9 3,9 L21,9 C21.552,9 22,8.552 22,8 L22,5 C22,3.895 21.105,3 20,3 L4,3 Z M5,5 C5.552,5 6,5.448 6,6 C6,6.552 5.552,7 5,7 C4.448,7 4,6.552 4,6 C4,5.448 4.448,5 5,5 Z M8.4140625,5 L10.585938,5 L12.585938,7 L10.4140625,7 L8.4140625,5 Z M13.414062,5 L15.585938,5 L17.585938,7 L15.414062,7 L13.414062,5 Z M18.414062,5 L20,5 L20,6.5859375 L18.414062,5 Z M3,11 C2.448,11 2,11.448 2,12 L2,19 C2,20.105 2.895,21 4,21 L20,21 C21.105,21 22,20.105 22,19 L22,12 C22,11.448 21.552,11 21,11 L3,11 Z" id="Shape" fill="#FFFFFF"></path>
+    </g>
+</svg>

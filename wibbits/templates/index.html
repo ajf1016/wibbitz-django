@@ -1,0 +1,292 @@
+{% extends 'base.html' %}{% load static %} {%block content%}
+<section id="spotlight">
+	<section class="wrapper flex-wrapper">
+		<section class="content">
+			<h1>The quickest and easiest online video editor for every team</h1>
+			<p>
+				Wibbitz gives you the freedom to create short form video online
+				in minutes – no experience necessary.
+			</p>
+			<form action="{% url 'web:subscribe' %}" method="post" class="ajax">
+				{% csrf_token %}
+				<input
+					type="email"
+					placeholder="Enter your work email"
+					name="email"
+				/>
+				<button type="submit">Get a Demo</button>
+			</form>
+		</section>
+		<div class="right_container">
+			<div class="img_container">
+				<img src="{% static 'images/home-hero.svg' %}" alt="" />
+			</div>
+			<a href="#" class="play-button">
+				<img src="{% static 'images/play.svg' %}" alt="" />
+			</a>
+		</div>
+	</section>
+</section>
+<section id="brands">
+	<section class="wrapper">
+		<p>Trusted by content creators across the world</p>
+		<ul>
+			{% for customer in customers %}
+			<li>
+				<a href="#"><img src="{{customer.image.url}}" alt="image" /></a>
+			</li>
+			{% endfor %}
+		</ul>
+	</section>
+</section>
+<section id="fearures">
+	{% for feature in features %}
+	<section class="feature">
+		<section class="wrapper flex-wrapper">
+			<div class="img_container">
+				<img src="{{feature.image.url}}" alt="" />
+			</div>
+			<div class="content">
+				<div
+					class="icon"
+					style="background: {{feature.icon_background}}"
+				>
+					<img src="{{feature.icon.url}}" alt="" />
+				</div>
+				<h3>{{feature.title}}</h3>
+				<p>{{feature.description}}</p>
+				<a href="#" class="button">Get a Demo</a>
+				<div class="review">
+					<hr class="dash" />
+					<blockquote>{{feature.testimonial_description}}</blockquote>
+					<span
+						><small>{{feature.testimonial_author}},</small
+						>{{feature.author_designation}}</span
+					>
+					<img src="{{feature.testimonial_logo}}" alt="" />
+				</div>
+			</div>
+		</section>
+	</section>
+	{% endfor %}
+</section>
+<section id="reviews">
+	<section class="wrapper">
+		<section class="top">
+			<h3>Create video like these leading brands</h3>
+		</section>
+		<section class="bottom">
+			<ul>
+				{% for review in video_blog %}
+				<li>
+					<div class="top">
+						<span class="play">
+							<img src="{{review.play_icon.url}}" alt="" />
+						</span>
+						<div class="logo">
+							<img src="{{review.logo.url}}" alt="" />
+						</div>
+					</div>
+					<h4>{{review.title}}</h4>
+				</li>
+				{% endfor %}
+			</ul>
+		</section>
+	</section>
+</section>
+<section id="testimonials">
+	<section class="wrapper">
+		<ul>
+			{%for testimonial in testimonial%}
+			<li>
+				<div class="top">
+					<img src="{{testimonial.image.url}}" alt="" class="cover" />
+					<div class="logo">
+						<img src="{{testimonial.logo.url}}" alt="" />
+					</div>
+				</div>
+				<div class="bottom">
+					<blockquote>{{testimonial.description}}</blockquote>
+					<h6>{{testimonial.name}}</h6>
+					<span>{{testimonial.designation}}</span>
+					<small>{{testimonial.company_name}}</small>
+				</div>
+			</li>
+			{% endfor %}
+		</ul>
+	</section>
+</section>
+<section id="features">
+	<section class="wrapper">
+		<section class="top">
+			<h3>Wibbitz gives every team the freedom to create</h3>
+		</section>
+		<section class="content">
+			<ul>
+				{% for feature in making_feature %}
+				<li>
+					<div class="content">
+						<a href="#" class="img_container"
+							><img src="{{feature.image.url}}" alt=""
+						/></a>
+						<h3><a href="#">{{feature.title}}</a></h3>
+						<p>{{feature.description}}</p>
+						<a href="#" class="button">Learn More</a>
+					</div>
+				</li>
+				{% endfor %}
+			</ul>
+		</section>
+		<section class="bottom">
+			<span class="icon"
+				><img src="{% static 'images/star.svg' %}" alt=""
+			/></span>
+			<div class="element">
+				<p>
+					Empower your whole team to create an engaging video in 7
+					minutes or less.
+				</p>
+				<a href="#" class="button">Get a Demo</a>
+			</div>
+		</section>
+	</section>
+</section>
+<section id="products">
+	<section class="wrapper">
+		<section class="top">
+			<h3>
+				Our three video solutions are built for every type of business
+			</h3>
+		</section>
+		<ul>
+			{% for product in products %}
+			<li class="{{product.class_name}}">
+				<div class="logo">
+					<img src="{{product.logo.url}}" alt="" />
+				</div>
+				<h1>{{product.name}}</hh1>
+				<p>{{product.description}}</p>
+				<a href="{% url 'web:product' pk=product.pk %}" class="button">Learn More</a>
+				<div class="img_bottom">
+					<img src="{{product.image.url}}" alt="" class="hero" />
+				</div>
+			</li>
+			{% endfor %}
+		</ul>
+	</section>
+</section>
+<section id="blog">
+	<section class="wrapper">
+		<section class="top">
+			<h3>
+				Video resources: Insider advice on how to bring your content to
+				life
+			</h3>
+		</section>
+		<ul>
+			{% for blog in blog %}
+			<li>
+				<img src="{{blog.image.url}}" alt="" />
+				<span style="color: #0055fb" class="label"
+					>{{blog.content_type}}</span
+				>
+				<h2>{{blog.title}}</h2>
+				<a href="#" class="button">{{blog.link_text}}</a>
+			</li>
+			{% endfor %}
+		</ul>
+		<div class="bottom">
+			<a href="#" class="button">Explore All Resources</a>
+		</div>
+	</section>
+</section>
+<section id="contact">
+	<section class="wrapper">
+		<div class="left">
+			<h3>Ready to get started?</h3>
+			<p>
+				Schedule a demo of our online video editor to start making your
+				own short form videos today. We’ll help you elevate your video
+				content strategy.
+			</p>
+
+			<hr class="line" />
+
+			<div class="testimonials">
+				<h5>Why do content creators choose Wibbitz?</h5>
+				<div class="content">
+					<blockquote>
+						"Wibbitz strengthens the communications strategy at our
+						company by allowing us to produce more videos, faster,
+						while maintaining top level of quality."
+					</blockquote>
+					<h6>Jeff Cucinell</h6>
+					<span class="role">
+						Director of Social Strategy, iHeartRadio</span
+					>
+				</div>
+				<ul class="people">
+					<li class="active">
+						<img src="{% static 'images/profile1.jpg' %}" alt="" />
+					</li>
+					<li>
+						<img src="{% static 'images/profile2.jpg' %}" alt="" />
+					</li>
+					<li>
+						<img src="{% static 'images/profile3.jpg' %}" alt="" />
+					</li>
+					<li>
+						<img src="{% static 'images/profile4.jpg' %}" alt="" />
+					</li>
+				</ul>
+			</div>
+			<hr class="line bottom" />
+			<div class="companies">
+				<ul>
+					{%for customer in latest_customers %}
+					<li>
+						<img src="{{customer.whiteImage.url}}" alt="" />
+					</li>
+					{% endfor%}
+				</ul>
+			</div>
+		</div>
+		<div class="right">
+			<div class="content">
+				<h4>Help us get to know you.</h4>
+				<form
+					action="{% url 'web:contact' %}"
+					method="post"
+					class="ajax"
+				>
+					{%csrf_token%}
+					<div class="one_by_two">{{form.email}}</div>
+					<div class="one_by_two">{{form.first_name}}</div>
+					<div class="one_by_two">{{form.last_name}}</div>
+					<div class="one_by_two">{{form.company}}</div>
+					<div class="one_by_two">{{form.company_size}}</div>
+					<div class="one_by_two">{{form.industry}}</div>
+					<div class="one_by_two">{{form.job_role}}</div>
+					<div class="one_by_two">{{form.country}}</div>
+					<div class="full checkbox">
+						{{form.user_agreement}}
+						<label for="{{form.user_agreement.id_for_label}}"
+							>Yes, I'd like to receive occasional marketing
+							emails from Wibbitz. I have the right to opt out at
+							any time.
+							<a href="#">View privacy policy.</a></label
+						>
+					</div>
+					<div class="full">
+						<input
+							class="submit"
+							type="submit"
+							value="Get a Demo"
+						/>
+					</div>
+				</form>
+			</div>
+		</div>
+	</section>
+</section>
+{%endblock%}
